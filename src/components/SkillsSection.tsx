@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React.js", level: 95, category: "Frontend" },
-  { name: "Next.js", level: 85, category: "Frontend" },
-  { name: "TypeScript", level: 90, category: "Language" },
-  { name: "JavaScript", level: 95, category: "Language" },
-  { name: "Node.js", level: 90, category: "Backend" },
-  { name: "Express.js", level: 88, category: "Backend" },
+  { name: "Shopify Theme Development", level: 95, category: "E-commerce" },
+  { name: "React.js + Redux", level: 90, category: "Frontend" },
+  { name: "JavaScript (ES6+)", level: 95, category: "Language" },
+  { name: "TypeScript", level: 88, category: "Language" },
+  { name: "Node.js", level: 88, category: "Backend" },
+  { name: "Express.js", level: 85, category: "Backend" },
   { name: "MongoDB", level: 85, category: "Database" },
-  { name: "Shopify", level: 92, category: "E-commerce" },
-  { name: "Tailwind CSS", level: 95, category: "Styling" },
-  { name: "Git", level: 88, category: "Tools" },
-  { name: "REST APIs", level: 90, category: "Backend" },
-  { name: "GraphQL", level: 80, category: "Backend" },
+  { name: "MySQL", level: 80, category: "Database" },
+  { name: "Tailwind CSS", level: 92, category: "Styling" },
+  { name: "Bootstrap", level: 90, category: "Styling" },
+  { name: "jQuery", level: 85, category: "Frontend" },
+  { name: "Liquid", level: 92, category: "E-commerce" },
 ];
 
 const SkillsSection = () => {

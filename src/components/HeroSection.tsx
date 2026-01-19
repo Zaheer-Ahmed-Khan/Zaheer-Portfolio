@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Download, ArrowRight } from "lucide-react";
+import { ArrowDown, Download, Mail } from "lucide-react";
 import TypewriterEffect from "./TypewriterEffect";
 import profileImage from "@/assets/profile-image.jpg";
 
 const HeroSection = () => {
-  const roles = ["Web Developer", "Shopify Developer", "MERN Stack Developer"];
+  const roles = ["Web Developer", "Shopify Expert", "MERN Developer", "TypeScript Developer"];
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
@@ -44,12 +44,10 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed"
+            className="text-muted-foreground text-lg mb-8 max-w-lg"
           >
-            Passionate about crafting exceptional digital experiences. I specialize in building 
-            modern, scalable web applications using cutting-edge technologies. From stunning 
-            e-commerce stores to full-stack MERN applications, I bring ideas to life with clean 
-            code and pixel-perfect designs.
+            Shopify Expert | MERN Developer | jQuery | TypeScript — Building high-quality, 
+            scalable, and performance-driven web solutions with clean code and excellent user experiences.
           </motion.p>
 
           <motion.div
@@ -62,48 +60,28 @@ const HeroSection = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold glow-button"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold flex items-center gap-2 glow-button"
             >
+              <Mail className="w-5 h-5" />
               Hire Me
-              <ArrowRight className="w-5 h-5" />
             </motion.a>
-
             <motion.a
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary/10 transition-colors"
+              className="px-8 py-4 border border-primary text-primary rounded-xl font-semibold flex items-center gap-2 hover:bg-primary/10 transition-colors"
             >
               <Download className="w-5 h-5" />
               Download CV
             </motion.a>
           </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="flex gap-8 mt-12"
-          >
-            {[
-              { number: "3+", label: "Years Experience" },
-              { number: "50+", label: "Projects Completed" },
-              { number: "30+", label: "Happy Clients" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl font-bold gradient-text">{stat.number}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
 
-        {/* Right Image */}
+        {/* Right - Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="order-1 lg:order-2 flex justify-center"
         >
           <div className="relative">
@@ -111,44 +89,53 @@ const HeroSection = () => {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 w-72 h-72 md:w-96 md:h-96 rounded-full border-2 border-dashed border-primary/30"
+              className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30"
+              style={{ width: "calc(100% + 40px)", height: "calc(100% + 40px)", top: "-20px", left: "-20px" }}
             />
             
-            {/* Glowing backdrop */}
-            <div className="absolute inset-4 w-64 h-64 md:w-80 md:h-80 bg-primary/20 rounded-full blur-2xl" />
-            
-            {/* Profile image */}
+            {/* Image container */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/50"
+              whileHover={{ scale: 1.02 }}
+              className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
             >
               <img
                 src={profileImage}
                 alt="Zaheer Ahmed Khan"
                 className="w-full h-full object-cover"
               />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </motion.div>
 
             {/* Floating badges */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-              className="absolute -right-4 top-1/4 glass-card px-4 py-2 rounded-lg"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1 }}
+              className="absolute -right-4 top-10 glass-card px-4 py-2 rounded-full"
             >
-              <span className="text-sm font-mono text-primary">React.js</span>
+              <span className="text-sm font-mono text-primary">Shopify Expert</span>
             </motion.div>
-
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -left-4 bottom-1/4 glass-card px-4 py-2 rounded-lg"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2 }}
+              className="absolute -left-4 bottom-20 glass-card px-4 py-2 rounded-full"
             >
-              <span className="text-sm font-mono text-primary">Node.js</span>
+              <span className="text-sm font-mono text-primary">MERN Stack</span>
             </motion.div>
           </div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <ArrowDown className="w-6 h-6 text-primary" />
+      </motion.div>
     </section>
   );
 };
