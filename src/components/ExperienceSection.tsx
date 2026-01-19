@@ -3,25 +3,20 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Web Developer",
-    company: "Tech Solutions Inc.",
-    period: "2022 - Present",
-    description: "Leading frontend development for enterprise applications, mentoring junior developers, and implementing best practices for scalable web applications.",
-    technologies: ["React", "TypeScript", "Node.js", "AWS"],
+    title: "Shopify Theme Developer",
+    company: "Conversions King",
+    period: "Aug 2025 - Jan 2026",
+    description: "Developed, customized, and optimized Shopify themes using Liquid, JavaScript, HTML, and CSS. Built custom sections and dynamic storefront components to meet client requirements. Improved UI/UX and responsiveness using Tailwind CSS and Bootstrap.",
+    technologies: ["Shopify", "Liquid", "JavaScript", "Tailwind CSS"],
+    type: "Contract",
   },
   {
-    title: "Shopify Developer",
-    company: "E-Commerce Agency",
-    period: "2021 - 2022",
-    description: "Developed custom Shopify themes and applications for various clients, resulting in improved conversion rates and customer satisfaction.",
-    technologies: ["Shopify", "Liquid", "JavaScript", "Ruby"],
-  },
-  {
-    title: "Full Stack Developer",
-    company: "StartUp Hub",
-    period: "2020 - 2021",
-    description: "Built and maintained full-stack applications using the MERN stack, collaborated with cross-functional teams to deliver high-quality products.",
+    title: "MERN Stack Developer",
+    company: "Infinity Creatives",
+    period: "May 2025 - July 2025",
+    description: "Developed full-stack web applications using the MERN stack. Built reusable and scalable React components. Implemented responsive UI and interactive features using modern JavaScript. Collaborated with senior developers and followed clean code and version control practices.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    type: "Internship",
   },
 ];
 

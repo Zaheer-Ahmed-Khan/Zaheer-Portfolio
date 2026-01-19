@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Rocket, Coffee } from "lucide-react";
+import { Code2, Palette, Rocket, Coffee, GraduationCap, Award } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
@@ -57,19 +57,38 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm a dedicated Full Stack Developer with a passion for creating exceptional web experiences. 
-              With over 3 years of experience in the industry, I've had the privilege of working on diverse 
-              projects ranging from e-commerce platforms to complex web applications.
+              A motivated and detail-oriented Shopify Developer and MERN Stack Developer with hands-on 
+              industry experience in Shopify theme development and modern web technologies. I specialize 
+              in React, JavaScript, Node.js, and Shopify Liquid to build high-quality, scalable, and 
+              performance-driven web solutions.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              My expertise spans across the MERN stack (MongoDB, Express.js, React, Node.js), and I'm 
-              particularly skilled in building Shopify stores that drive conversions. I believe in writing 
-              clean, efficient code that not only works but is also maintainable and scalable.
+              Passionate about delivering clean code, excellent user experiences, and continuous learning 
+              while adding measurable value to forward-thinking organizations. My expertise spans across 
+              the MERN stack and I'm particularly skilled in building Shopify stores that drive conversions.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-              projects, or sharing my knowledge with the developer community.
-            </p>
+
+            {/* Education & Certification */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="glass-card p-4"
+              >
+                <GraduationCap className="w-6 h-6 text-primary mb-2" />
+                <h4 className="font-semibold text-foreground text-sm">BS Information Technology</h4>
+                <p className="text-xs text-muted-foreground">University of Sargodha | 2019 - 2024</p>
+                <p className="text-xs text-primary font-mono mt-1">3.29/4 GPA</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="glass-card p-4"
+              >
+                <Award className="w-6 h-6 text-primary mb-2" />
+                <h4 className="font-semibold text-foreground text-sm">Responsive Web Design</h4>
+                <p className="text-xs text-muted-foreground">freeCodeCamp</p>
+                <p className="text-xs text-primary font-mono mt-1">Certified</p>
+              </motion.div>
+            </div>
 
             <motion.a
               href="#contact"
