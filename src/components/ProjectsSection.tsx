@@ -3,51 +3,57 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured Shopify store with custom theme development, payment integration, and inventory management.",
-    tech: ["Shopify", "Liquid", "JavaScript", "CSS"],
-    github: "#",
-    live: "#",
+    title: "ProLon Life",
+    description: "Custom Shopify sections, refined PDP, sticky add-to-cart, and conversion-driven storefront work for a leading fasting-mimicking diet brand.",
+    tech: ["Shopify", "Liquid", "JavaScript", "Tailwind"],
+    github: null,
+    live: "https://prolonlife.com/",
+    image: "/prolon.png",
     featured: true,
   },
   {
-    title: "Task Management App",
-    description: "A collaborative project management tool built with the MERN stack featuring real-time updates and team collaboration.",
-    tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    github: "#",
-    live: "#",
+    title: "L-Nutra Health",
+    description: "Dynamic Shopify storefront and responsive UI for a clinical longevity nutrition platform built to engage customers and drive repeat purchases.",
+    tech: ["Shopify", "Liquid", "JavaScript", "Tailwind"],
+    github: null,
+    live: "https://l-nutrahealth.com/",
+    image: "/lnutra.png",
     featured: true,
   },
   {
-    title: "Portfolio Dashboard",
-    description: "A modern analytics dashboard for tracking portfolio performance with interactive charts and data visualization.",
-    tech: ["Next.js", "TypeScript", "Chart.js", "Tailwind"],
-    github: "#",
-    live: "#",
+    title: "MoxieLash",
+    description: "Liquid-powered custom sections, performance tuning, and pixel-perfect responsive UI for a premium magnetic lash brand.",
+    tech: ["Shopify", "Liquid", "Bootstrap", "Performance"],
+    github: null,
+    live: "http://moxielash.com/",
+    image: "/moxielash.png",
     featured: true,
   },
   {
-    title: "Blog Platform",
-    description: "A headless CMS-powered blog with SEO optimization and markdown support.",
-    tech: ["React", "GraphQL", "Contentful"],
-    github: "#",
+    title: "StayVista",
+    description: "End-to-end stay booking platform with auth, listings, bookings, and payments built using React, Node.js, Express and MongoDB.",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Zaheer-Ahmed-Khan",
     live: "#",
+    image: "/placeholder.svg",
     featured: false,
   },
   {
-    title: "Weather App",
-    description: "Real-time weather application with location-based forecasts and beautiful UI.",
-    tech: ["React", "OpenWeather API", "Geolocation"],
-    github: "#",
+    title: "Moody Foody Recipes",
+    description: "Mood-based recipe explorer with a clean React UI, search and category filters powered by a public food API.",
+    tech: ["React", "JavaScript", "CSS", "API"],
+    github: "https://github.com/Zaheer-Ahmed-Khan",
     live: "#",
+    image: "/placeholder.svg",
     featured: false,
   },
   {
-    title: "Chat Application",
-    description: "Real-time messaging app with WebSocket integration and file sharing.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "#",
+    title: "Socio",
+    description: "Social media app UI featuring feeds, profiles, and interactions built with a modern React stack and polished frontend design.",
+    tech: ["React", "JS", "Tailwind"],
+    github: "https://github.com/Zaheer-Ahmed-Khan",
     live: "#",
+    image: "/placeholder.svg",
     featured: false,
   },
 ];
@@ -81,9 +87,11 @@ const ProjectsSection = () => {
               }`}
             >
               <div className={`glass-card aspect-video rounded-xl overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                  <Folder className="w-20 h-20 text-primary/50" />
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className={index % 2 === 1 ? "lg:order-1 lg:text-right" : ""}>
@@ -100,13 +108,15 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className={`flex gap-4 ${index % 2 === 1 ? "lg:justify-end" : ""}`}>
-                  <motion.a
-                    href={project.github}
-                    whileHover={{ scale: 1.1 }}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-6 h-6" />
-                  </motion.a>
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      whileHover={{ scale: 1.1 }}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github className="w-6 h-6" />
+                    </motion.a>
+                  )}
                   <motion.a
                     href={project.live}
                     whileHover={{ scale: 1.1 }}
@@ -144,12 +154,16 @@ const ProjectsSection = () => {
               <div className="flex justify-between items-start mb-6">
                 <Folder className="w-10 h-10 text-primary" />
                 <div className="flex gap-3">
-                  <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Github className="w-5 h-5" />
-                  </a>
-                  <a href={project.live} className="text-muted-foreground hover:text-primary transition-colors">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
+                  {project.github && (
+                    <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
+                      <Github className="w-5 h-5" />
+                    </a>
+                  )}
+                  {project.live && project.live !== "#" && (
+                    <a href={project.live} className="text-muted-foreground hover:text-primary transition-colors">
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
               </div>
               <h4 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">

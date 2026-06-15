@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "Shopify Theme Development", level: 95, category: "E-commerce" },
-  { name: "React.js + Redux", level: 90, category: "Frontend" },
-  { name: "JavaScript (ES6+)", level: 95, category: "Language" },
-  { name: "TypeScript", level: 88, category: "Language" },
-  { name: "Node.js", level: 88, category: "Backend" },
-  { name: "Express.js", level: 85, category: "Backend" },
-  { name: "MongoDB", level: 85, category: "Database" },
-  { name: "MySQL", level: 80, category: "Database" },
-  { name: "Tailwind CSS", level: 92, category: "Styling" },
-  { name: "Bootstrap", level: 90, category: "Styling" },
-  { name: "jQuery", level: 85, category: "Frontend" },
+  { name: "Shopify", level: 95, category: "E-commerce" },
   { name: "Liquid", level: 92, category: "E-commerce" },
+  { name: "JavaScript", level: 93, category: "Language" },
+  { name: "TypeScript", level: 85, category: "Language" },
+  { name: "React", level: 90, category: "Frontend" },
+  { name: "Next.js", level: 82, category: "Frontend" },
+  { name: "Node.js", level: 85, category: "Backend" },
+  { name: "Express.js", level: 83, category: "Backend" },
+  { name: "MongoDB", level: 80, category: "Database" },
+  { name: "Tailwind CSS", level: 95, category: "Styling" },
+  { name: "Git & GitHub", level: 90, category: "Tooling" },
+  { name: "Three.js", level: 70, category: "3D" },
 ];
 
 const SkillsSection = () => {

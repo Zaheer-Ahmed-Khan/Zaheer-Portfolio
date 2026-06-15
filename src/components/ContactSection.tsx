@@ -1,30 +1,58 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    setIsSubmitting(true);
+
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const data = new FormData(formElement);
+
+      const response = await fetch("https://formsubmit.co/zaheerkhan4726@gmail.com", {
+        method: "POST",
+        body: data,
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully! I'll get back to you soon.", {
+          duration: 5000,
+        });
+        setFormData({ name: "", email: "", message: "" });
+        formElement.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.", {
+          duration: 5000,
+        });
+      }
+    } catch (error) {
+      toast.error("Error sending message. Please try again.", {
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     { icon: Mail, text: "zaheerkhan4726@gmail.com", href: "mailto:zaheerkhan4726@gmail.com" },
-    { icon: Phone, text: "0331-4726-925", href: "tel:+923314726925" },
-    { icon: MapPin, text: "Pakistan", href: "#" },
+    { icon: Phone, text: "+92 331 4726925", href: "tel:+923314726925" },
+    { icon: MapPin, text: "Chakwal, Punjab, Pakistan", href: "#" },
   ];
 
   const socials = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/zaheerahmedkhan4726925/", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Github, href: "https://github.com/Zaheer-Ahmed-Khan", label: "GitHub" },
   ];
 
   return (
@@ -51,8 +79,7 @@ const ContactSection = () => {
           >
             <h3 className="text-2xl font-bold text-foreground mb-6">Let's work together</h3>
             <p className="text-muted-foreground mb-8">
-              I'm always interested in hearing about new projects and opportunities. 
-              Whether you have a question or just want to say hi, feel free to reach out!
+              Available for Shopify builds, MERN projects, and collaboration. I usually respond within a day — send a message and let's see how we can level up your storefront.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -113,6 +140,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-foreground placeholder:text-muted-foreground transition-all"
@@ -128,6 +156,7 @@ const ContactSection = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl bg-muted border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-foreground placeholder:text-muted-foreground transition-all"
@@ -142,6 +171,7 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -151,14 +181,17 @@ const ContactSection = () => {
                 />
               </div>
 
+              <input type="hidden" name="_captcha" value="false" />
+
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-semibold flex items-center justify-center gap-2 glow-button"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-semibold flex items-center justify-center gap-2 glow-button disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 <Send className="w-5 h-5" />
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
             </form>
           </motion.div>

@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
 
           <p className="text-muted-foreground text-sm">
-            © 2025 All rights reserved.
+            © 2026 Zaheer Ahmed Khan. All rights reserved.
           </p>
         </motion.div>
       </div>

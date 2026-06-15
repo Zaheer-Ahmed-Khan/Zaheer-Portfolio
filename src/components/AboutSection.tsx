@@ -3,10 +3,10 @@ import { Code2, Palette, Rocket, Coffee, GraduationCap, Award } from "lucide-rea
 
 const AboutSection = () => {
   const highlights = [
-    { icon: Code2, title: "Clean Code", desc: "Writing maintainable, scalable code" },
-    { icon: Palette, title: "UI/UX Focus", desc: "Creating beautiful interfaces" },
-    { icon: Rocket, title: "Performance", desc: "Optimized for speed" },
-    { icon: Coffee, title: "Dedicated", desc: "Passionate about my craft" },
+    { icon: Code2, title: "Shopify Liquid", desc: "Custom storefronts built for conversion" },
+    { icon: Palette, title: "UI/UX Focused", desc: "Pixel-perfect, merchandiser-friendly design" },
+    { icon: Rocket, title: "Performance First", desc: "Lighthouse-grade speed and Core Web Vitals" },
+    { icon: Coffee, title: "Deployment Ready", desc: "Production-ready handoff and clean architecture" },
   ];
 
   return (
@@ -57,15 +57,10 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
-              A motivated and detail-oriented Shopify Developer and MERN Stack Developer with hands-on 
-              industry experience in Shopify theme development and modern web technologies. I specialize 
-              in React, JavaScript, Node.js, and Shopify Liquid to build high-quality, scalable, and 
-              performance-driven web solutions.
+              I'm Zaheer Ahmed Khan, a Chakwal-based Shopify & Full-Stack developer. I help DTC brands turn ideas into pixel-perfect storefronts that load fast, convert better, and feel premium on every device.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Passionate about delivering clean code, excellent user experiences, and continuous learning 
-              while adding measurable value to forward-thinking organizations. My expertise spans across 
-              the MERN stack and I'm particularly skilled in building Shopify stores that drive conversions.
+              From custom Liquid sections to MERN dashboards, I've shipped production work for brands like ProLon Life, L-Nutra Health and MoxieLash — obsessing over performance, accessibility and the small details that move metrics.
             </p>
 
             {/* Education & Certification */}
@@ -76,17 +71,17 @@ const AboutSection = () => {
               >
                 <GraduationCap className="w-6 h-6 text-primary mb-2" />
                 <h4 className="font-semibold text-foreground text-sm">BS Information Technology</h4>
-                <p className="text-xs text-muted-foreground">University of Sargodha | 2019 - 2024</p>
-                <p className="text-xs text-primary font-mono mt-1">3.29/4 GPA</p>
+                <p className="text-xs text-muted-foreground">University of Sargodha · 2019 - 2024</p>
+                <p className="text-xs text-primary font-mono mt-1">GPA 3.29 / 4.0</p>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="glass-card p-4"
               >
                 <Award className="w-6 h-6 text-primary mb-2" />
-                <h4 className="font-semibold text-foreground text-sm">Responsive Web Design</h4>
-                <p className="text-xs text-muted-foreground">freeCodeCamp</p>
-                <p className="text-xs text-primary font-mono mt-1">Certified</p>
+                <h4 className="font-semibold text-foreground text-sm">Shopify & MERN</h4>
+                <p className="text-xs text-muted-foreground">Custom storefronts, reusable components, and optimized handoff.</p>
+                <p className="text-xs text-primary font-mono mt-1">Conversion-focused delivery</p>
               </motion.div>
             </div>
 

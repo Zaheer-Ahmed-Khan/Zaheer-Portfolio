@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import TypewriterEffect from "./TypewriterEffect";
-import profileImage from "@/assets/profile-image.jpg";
+import profileImage from "@/assets/profile-image.png";
 
 const HeroSection = () => {
-  const roles = ["Web Developer", "Shopify Expert", "MERN Developer", "TypeScript Developer"];
+  const roles = ["Zaheer Ahmed Khan", "Shopify Expert", "MERN Stack Engineer", "Performance-first Developer", "Storefront Builder", "E-commerce Solution Expert"];
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
@@ -14,6 +14,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
+       
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -26,19 +27,19 @@ const HeroSection = () => {
             transition={{ delay: 0.2 }}
             className="text-primary font-mono text-lg mb-4"
           >
-            👋 Hello World, I'm
+            👋 Hello World,
           </motion.p>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
-            Hey! I'm{" "}
-            <span className="block mt-2">
-              <TypewriterEffect words={["Zaheer Ahmed Khan"]} typingSpeed={80} deletingSpeed={0} pauseDuration={99999999} />
-            </span>
-          </h1>
-
-          <div className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6 h-12">
+ 
+ <span className="text-primary">&lt;h1&gt;</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground  leading-tight">
+             I'm <span className="text-2xl md:text-3xl font-semibold text-muted-foreground">
             <TypewriterEffect words={roles} typingSpeed={100} deletingSpeed={60} pauseDuration={2000} />
-          </div>
+          </span> 
+          </h1>
+          <span className="text-primary flex flex-row-reverse mb-4"> &lt;/h1&gt;</span>
+          
+
+          
 
           <motion.p
             initial={{ opacity: 0 }}
@@ -46,8 +47,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             className="text-muted-foreground text-lg mb-8 max-w-lg"
           >
-            Shopify Expert | MERN Developer | jQuery | TypeScript — Building high-quality, 
-            scalable, and performance-driven web solutions with clean code and excellent user experiences.
+            Hi, I'm Zaheer. I build storefronts that sell. Shopify Liquid + MERN engineer crafting fast, conversion-driven e-commerce experiences for brands like ProLon, L-Nutra and MoxieLash.
           </motion.p>
 
           <motion.div
@@ -66,13 +66,14 @@ const HeroSection = () => {
               Hire Me
             </motion.a>
             <motion.a
-              href="#"
+              href="/resume.pdf"
+              download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border border-primary text-primary rounded-xl font-semibold flex items-center gap-2 hover:bg-primary/10 transition-colors"
             >
               <Download className="w-5 h-5" />
-              Download CV
+              Download Resume
             </motion.a>
           </motion.div>
         </motion.div>

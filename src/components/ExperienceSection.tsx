@@ -5,18 +5,26 @@ const experiences = [
   {
     title: "Shopify Theme Developer",
     company: "Conversions King",
-    period: "Aug 2025 - Jan 2026",
-    description: "Developed, customized, and optimized Shopify themes using Liquid, JavaScript, HTML, and CSS. Built custom sections and dynamic storefront components to meet client requirements. Improved UI/UX and responsiveness using Tailwind CSS and Bootstrap.",
-    technologies: ["Shopify", "Liquid", "JavaScript", "Tailwind CSS"],
+    period: "Aug 2025 — Present",
+    description: "Developed, customized & optimized Shopify themes using Liquid, JS, HTML & CSS. Built custom merchandiser-friendly sections and dynamic storefront components. Improved UI/UX and responsiveness with Tailwind and Bootstrap.",
+    technologies: ["Shopify", "Liquid", "JavaScript", "Tailwind"],
     type: "Contract",
   },
   {
     title: "MERN Stack Developer",
     company: "Infinity Creatives",
-    period: "May 2025 - July 2025",
-    description: "Developed full-stack web applications using the MERN stack. Built reusable and scalable React components. Implemented responsive UI and interactive features using modern JavaScript. Collaborated with senior developers and followed clean code and version control practices.",
+    period: "May 2025 — July 2025",
+    description: "Built production-ready MERN apps with reusable React components, clean API design, and scalable frontend architecture. Collaborated with senior developers on Git workflows and feature delivery.",
     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
     type: "Internship",
+  },
+  {
+    title: "BS Information Technology",
+    company: "University of Sargodha",
+    period: "2019 — 2024",
+    description: "Completed coursework in DSA, OOP, DBMS, web engineering and software architecture, graduating with strong technical fundamentals for full-stack application development.",
+    technologies: ["Software Architecture", "Database Systems", "Algorithms", "Web Engineering"],
+    type: "Degree",
   },
 ];
 
