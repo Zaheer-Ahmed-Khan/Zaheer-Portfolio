@@ -112,6 +112,17 @@
   }
 }
 
+/* Mobile menu tweaks */
+.mobile-lock {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.nav-overlay {
+  z-index: 60;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

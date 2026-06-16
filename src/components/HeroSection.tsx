@@ -108,22 +108,39 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </motion.div>
 
-            {/* Floating badges */}
+            {/* Floating badges orbiting anticlockwise */}
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1 }}
-              className="absolute -right-4 top-10 glass-card px-4 py-2 rounded-full"
+              transition={{ delay: 0.9 }}
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
             >
-              <span className="text-sm font-mono text-primary">Shopify Expert</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2 }}
-              className="absolute -left-4 bottom-20 glass-card px-4 py-2 rounded-full"
-            >
-              <span className="text-sm font-mono text-primary">MERN Stack</span>
+              <motion.div
+                aria-hidden
+                animate={{ rotate: -360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="relative w-[320px] h-[320px]"
+              >
+                {/* Top-right badge (will orbit) */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute right-6 top-6 glass-card px-4 py-2 rounded-full"
+                  style={{ transformOrigin: "center" }}
+                >
+                  <span className="text-sm font-mono text-primary">Shopify Expert</span>
+                </motion.div>
+
+                {/* Bottom-left badge (will orbit) */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute left-6 bottom-6 glass-card px-4 py-2 rounded-full"
+                  style={{ transformOrigin: "center" }}
+                >
+                  <span className="text-sm font-mono text-primary">MERN Stack</span>
+                </motion.div>
+              </motion.div>
             </motion.div>
           </div>
         </motion.div>
