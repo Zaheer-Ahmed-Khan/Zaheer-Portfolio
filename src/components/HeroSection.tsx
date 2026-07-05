@@ -7,19 +7,19 @@ const HeroSection = () => {
   const roles = ["Zaheer Ahmed Khan", "Shopify Expert", "MERN Stack Engineer", "Performance-first Developer", "Storefront Builder", "E-commerce Solution Expert"];
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center pt-20 px-3 sm:px-6 relative overflow-hidden">
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 items-center relative z-10">
         {/* Left Content */}
        
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="order-2 lg:order-1"
+          className="order-2 w-full max-w-xl mx-auto lg:order-1 lg:mx-0"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -31,8 +31,8 @@ const HeroSection = () => {
           </motion.p>
  
  <span className="text-primary">&lt;h1&gt;</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground  leading-tight">
-             I'm <span className="text-2xl md:text-3xl font-semibold text-muted-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+             I'm <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-muted-foreground">
             <TypewriterEffect words={roles} typingSpeed={100} deletingSpeed={60} pauseDuration={2000} />
           </span> 
           </h1>
@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-muted-foreground text-lg mb-8 max-w-lg"
+            className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 max-w-lg"
           >
             Hi, I'm Zaheer. I build storefronts that sell. Shopify Liquid + MERN engineer crafting fast, conversion-driven e-commerce experiences for brands like ProLon, L-Nutra and MoxieLash.
           </motion.p>
@@ -54,13 +54,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold flex items-center gap-2 glow-button"
+              className="w-full sm:w-auto justify-center sm:justify-start px-6 py-3 sm:px-8 sm:py-4 bg-primary text-primary-foreground rounded-xl font-semibold flex items-center gap-2 glow-button"
             >
               <Mail className="w-5 h-5" />
               Hire Me
@@ -70,7 +70,7 @@ const HeroSection = () => {
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border border-primary text-primary rounded-xl font-semibold flex items-center gap-2 hover:bg-primary/10 transition-colors"
+              className="w-full sm:w-auto justify-center sm:justify-start px-6 py-3 sm:px-8 sm:py-4 border border-primary text-primary rounded-xl font-semibold flex items-center gap-2 hover:bg-primary/10 transition-colors"
             >
               <Download className="w-5 h-5" />
               Download Resume
@@ -83,7 +83,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="order-1 lg:order-2 flex justify-center"
+          className="order-1 w-full lg:order-2 flex justify-center"
         >
           <div className="relative">
             {/* Decorative ring */}
@@ -97,7 +97,7 @@ const HeroSection = () => {
             {/* Image container */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
+              className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl"
             >
               <img
                 src={profileImage}
@@ -113,13 +113,13 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.9 }}
-              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              className="absolute inset-0 hidden items-center justify-center pointer-events-none sm:flex"
             >
               <motion.div
                 aria-hidden
                 animate={{ rotate: -360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="relative w-[320px] h-[320px]"
+                className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px]"
               >
                 {/* Top-right badge (will orbit) */}
                 <motion.div

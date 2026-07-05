@@ -30,7 +30,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-secondary/30">
+    <section id="experience" className="py-16 px-3 sm:px-6 sm:py-24 bg-secondary/30">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,7 +46,7 @@ const ExperienceSection = () => {
         <div className="max-w-3xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-border" />
+            <div className="absolute left-3 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-border" />
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -55,25 +55,25 @@ const ExperienceSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex items-center mb-12 ${
+                className={`relative flex items-start mb-10 sm:mb-12 ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
+                <div className="absolute left-3 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
 
                 {/* Content */}
-                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                <div className={`ml-8 w-full md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="glass-card p-6"
+                    className="glass-card p-4 sm:p-6"
                   >
-                    <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <div className={`flex flex-wrap items-center gap-2 mb-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                       <Briefcase className="w-4 h-4 text-primary" />
                       <span className="text-primary font-mono text-sm">{exp.company}</span>
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2">{exp.title}</h3>
-                    <div className={`flex items-center gap-2 text-sm text-muted-foreground mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                    <div className={`flex flex-wrap items-center gap-2 text-sm text-muted-foreground mb-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                       <Calendar className="w-4 h-4" />
                       {exp.period}
                     </div>

@@ -10,7 +10,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-6 relative">
+    <section id="about" className="py-16 px-3 sm:px-6 sm:py-24 relative">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -23,14 +23,14 @@ const AboutSection = () => {
           <h2 className="section-heading">About Me</h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left - Cards */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
           >
             {highlights.map((item, index) => (
               <motion.div
@@ -40,7 +40,7 @@ const AboutSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="glass-card p-6 text-center group cursor-pointer"
+                className="glass-card p-4 sm:p-6 text-center group cursor-pointer"
               >
                 <item.icon className="w-10 h-10 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
@@ -64,7 +64,7 @@ const AboutSection = () => {
             </p>
 
             {/* Education & Certification */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 mb-8">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="glass-card p-4"

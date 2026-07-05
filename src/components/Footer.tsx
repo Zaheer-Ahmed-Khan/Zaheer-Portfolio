@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-6 border-t border-border">
+    <footer className="py-8 px-3 sm:px-6 border-t border-border">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

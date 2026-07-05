@@ -56,7 +56,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 relative">
+    <section id="contact" className="py-16 px-3 sm:px-6 sm:py-24 relative">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -69,7 +69,7 @@ const ContactSection = () => {
           <h2 className="section-heading">Contact Me</h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
           {/* Left - Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -92,7 +92,7 @@ const ContactSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-4 p-4 glass-card group"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 glass-card group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <info.icon className="w-5 h-5 text-primary" />
@@ -104,7 +104,7 @@ const ContactSection = () => {
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {socials.map((social, index) => (
                 <motion.a
                   key={social.label}
@@ -132,7 +132,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-8">
+            <form onSubmit={handleSubmit} className="glass-card p-4 sm:p-8">
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Your Name

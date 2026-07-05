@@ -17,7 +17,7 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-24 px-6 bg-secondary/30">
+    <section id="skills" className="py-16 px-3 sm:px-6 sm:py-24 bg-secondary/30">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -30,7 +30,7 @@ const SkillsSection = () => {
           <h2 className="section-heading">Technical Skills</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -39,7 +39,7 @@ const SkillsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
               whileHover={{ scale: 1.02 }}
-              className="glass-card p-5 group"
+              className="glass-card p-4 sm:p-5 group"
             >
               <div className="flex justify-between items-center mb-3">
                 <span className="font-semibold text-foreground group-hover:text-primary transition-colors">

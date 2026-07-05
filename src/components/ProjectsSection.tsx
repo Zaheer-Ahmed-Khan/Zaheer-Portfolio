@@ -60,7 +60,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-16 px-3 sm:px-6 sm:py-24">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -82,7 +82,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className={`grid lg:grid-cols-2 gap-8 items-center ${
+              className={`grid grid-cols-1 gap-6 sm:gap-8 items-center lg:grid-cols-2 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -107,7 +107,7 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className={`flex gap-4 ${index % 2 === 1 ? "lg:justify-end" : ""}`}>
+                <div className={`flex flex-wrap gap-4 ${index % 2 === 1 ? "lg:justify-end" : ""}`}>
                   {project.github && (
                     <motion.a
                       href={project.github}
@@ -140,7 +140,7 @@ const ProjectsSection = () => {
           Other Noteworthy Projects
         </motion.h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {projects.filter(p => !p.featured).map((project, index) => (
             <motion.div
               key={project.title}
@@ -149,9 +149,9 @@ const ProjectsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="glass-card p-6 group"
+              className="glass-card p-4 sm:p-6 group"
             >
-              <div className="flex justify-between items-start mb-6">
+              <div className="flex justify-between items-start mb-4 sm:mb-6">
                 <Folder className="w-10 h-10 text-primary" />
                 <div className="flex gap-3">
                   {project.github && (
