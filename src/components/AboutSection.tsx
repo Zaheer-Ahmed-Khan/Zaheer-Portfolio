@@ -57,10 +57,10 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm Zaheer Ahmed Khan, a Chakwal-based Shopify & Full-Stack developer. I help DTC brands turn ideas into pixel-perfect storefronts that load fast, convert better, and feel premium on every device.
+              I'm Zaheer Ahmed Khan, a Shopify Frontend Developer with 1+ year of professional experience. I specialize in building and customizing e-commerce storefronts using Shopify Liquid, JavaScript, HTML5, CSS3, Tailwind CSS, and Bootstrap.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              From custom Liquid sections to MERN dashboards, I've shipped production work for brands like ProLon Life, L-Nutra Health and MoxieLash — obsessing over performance, accessibility and the small details that move metrics.
+              Experienced in responsive theme development and reusable Liquid components, I translate Figma designs and business requirements into conversion-driven Shopify Liquid sections and responsive storefront components for DTC brands.
             </p>
 
             {/* Education & Certification */}

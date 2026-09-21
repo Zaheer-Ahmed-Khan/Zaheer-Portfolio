@@ -4,7 +4,7 @@ import TypewriterEffect from "./TypewriterEffect";
 import profileImage from "@/assets/profile-image.png";
 
 const HeroSection = () => {
-  const roles = ["Zaheer Ahmed Khan", "Shopify Expert", "MERN Stack Engineer", "Performance-first Developer", "Storefront Builder", "E-commerce Solution Expert"];
+  const roles = ["Shopify Frontend Developer", "Shopify Theme Developer", "E-Commerce Frontend Developer", "Conversion-Focused Builder", "Liquid Specialist", "MERN Stack Engineer"];
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-3 sm:px-6 relative overflow-hidden">
@@ -47,7 +47,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 max-w-lg"
           >
-            Hi, I'm Zaheer. I build storefronts that sell. Shopify Liquid + MERN engineer crafting fast, conversion-driven e-commerce experiences for brands like ProLon, L-Nutra and MoxieLash.
+            Hi, I'm Zaheer Ahmed Khan. With 1+ year of professional experience, I build high-converting Shopify storefronts and MERN applications. Worked across 3+ Shopify stores, delivering 30+ responsive landing pages and 50+ custom Liquid sections for ProLon Life, L-Nutra Health, and MoxieLash.
           </motion.p>
 
           <motion.div
