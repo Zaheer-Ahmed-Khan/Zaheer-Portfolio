@@ -4,7 +4,7 @@ import TypewriterEffect from "./TypewriterEffect";
 import profileImage from "@/assets/profile-image.png";
 
 const HeroSection = () => {
-  const roles = ["Shopify Frontend Developer", "Shopify Theme Developer", "E-Commerce Frontend Developer", "Conversion-Focused Builder", "Liquid Specialist", "MERN Stack Engineer"];
+  const roles = ["Zaheer Ahmed Khan" ,"Shopify Frontend Developer", "Shopify Theme Developer", "E-Commerce Frontend Developer", "Conversion-Focused Builder", "Liquid Specialist", "MERN Stack Engineer"];
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-3 sm:px-6 relative overflow-hidden">
